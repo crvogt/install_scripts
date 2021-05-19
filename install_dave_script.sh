@@ -28,15 +28,11 @@ then
 	git clone https://bitbucket.org/whoidsl/ds_sim.git
 	git clone https://bitbucket.org/whoidsl/ds_msgs.git
 
-	cd ..;catkin_make
-
 if [[ -n $INSTALL_VRX ]]
 then
-	cd /home/$USER/
-	sudo apt update
-	sudo apt full-upgrade
 	mkdir -p /home/$USER/vrx_ws/src
 	cd /home/$USER/vrx_ws/src
+	git clone https://github.com/osrf/vrx
 	source /opt/ros/$ROS_VERSION/setup.bash
 	cd ..
 	catkin_make

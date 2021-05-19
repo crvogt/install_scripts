@@ -20,3 +20,13 @@ sudo apt-get install ros-$ROS_VERSION-desktop-full
 source /opt/ros/$ROS_VERSION/setup.bash
 echo "source /opt/ros/$ROS_VERSION/setup.bash" >> /home/$USER/.bashrc
 source /home/$USER/.bashrc
+
+# Setup sources list
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+# Setup keys
+wget https://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+# update
+sudo apt-get update
+sudo apt-get install $GAZEBO_VERSION

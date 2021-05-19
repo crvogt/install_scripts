@@ -3,14 +3,20 @@
 USER='carson'
 # Checking for greater than zero build flags
 BUILD_OGRE=""
-INSTALL_ROS="True"
+INSTALL_ROS=""
 INSTALL_GAZEBO=""
 BINSTALL_DAVE_DIRECTORIES=""
 SUBLIME_HOME='sublime_text_2'
 
 cd /home/$USER 
 
-sudo apt-get install vim git cmake cmake-qt-gui gcc g++ build-essential tmux 
+sudo apt-get install vim git cmake cmake-qt-gui gcc g++ build-essential tmux vlc ffmpeg python3-pip openssh-server openssh-client texlive-full texmaker -y
+
+# Currently required to avoid opencv hangup
+python3 -m pip install --upgrade pip
+
+python3 -m pip install matplotlib scipy 
+python3 -m pip install scikit-build opencv-python
 
 mkdir libs
 

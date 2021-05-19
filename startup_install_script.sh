@@ -31,6 +31,10 @@ touch .bash_aliases
 echo $SUBLIME_HOME
 echo alias subl=/home/$USER/libs/$SUBLIME_HOME/sublime_text >> .bash_aliases
 
+# Get skype
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -i skype*.deb
+
 touch .gitignore_global
 echo '.idea' >> .gitignore_global
 echo '.cache' >> .gitignore_global

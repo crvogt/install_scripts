@@ -54,13 +54,13 @@ echo 'bind -n M-Down select-pane -D' >> .tmux.conf
 
 if [[ -n $INSTALL_ROS  ]]
 then
-	./install_ros_script.sh
+	install_ros_script.sh
 elif [[ -n $INSTALL_GAZEBO ]]
 then
-	./install_gazebo_script.sh
+	install_gazebo_script.sh
 elif [[ -n $BINSTALL_DAVE_DIRECTORIES ]]
 then
-	./install_dave_script.sh
+	install_dave_script.sh
 fi
 
 source .bashrc

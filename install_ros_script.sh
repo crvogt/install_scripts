@@ -7,6 +7,8 @@ GAZEBO_VERSION='gazebo11'
 ROS_DIR=/opt/ros/$ROS_VERSION
 if [[ -d ROS_DIR ]]
 then
+	echo 'ROS is installed'
+else
 
 	# Install ROS dependencies
 	# Setup your sources.list
@@ -32,6 +34,4 @@ then
 	# update
 	sudo apt-get update
 	sudo apt-get install $GAZEBO_VERSION
-else
-	echo 'ROS is already installed'
 fi

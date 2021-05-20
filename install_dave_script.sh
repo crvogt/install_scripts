@@ -34,6 +34,10 @@ fi
 
 if [[ -n $INSTALL_VRX ]]
 then
+	# Install dependencies
+	sudo apt install cmake mercurial git ruby libeigen3-dev lib$GAZEBO_VERSION-dev pkg-config python ros-$ROS_VERSION-gazebo-plugins ros-${DIST}-gazebo-ros ros-$ROS_VERSION-hector-gazebo-plugins ros-$ROS_VERSION-joy ros-$ROS_VERSION-joy-teleop ros-$ROS_VERSION-key-teleop ros-$ROS_VERSION-robot-localization ros-$ROS_VERSION-robot-state-publisher ros-$ROS_VERSION-joint-state-publisher ros-$ROS_VERSION-rviz ros-$ROS_VERSION-ros-base ros-$ROS_VERSION-teleop-tools ros-$ROS_VERSION-teleop-twist-keyboard ros-$ROS_VERSION-velodyne-simulator ros-$ROS_VERSION-xacro ros-$ROS_VERSION-rqt ros-$ROS_VERSION-rqt-common-plugins protobuf-compiler
+
+
 	mkdir -p /home/$USER/vrx_ws/src
 	cd /home/$USER/vrx_ws/src
 	git clone https://github.com/osrf/vrx

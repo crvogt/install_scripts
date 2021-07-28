@@ -1,8 +1,8 @@
 USER='carson'
-ROS_VERSION='melodic'
-GAZEBO_VERSION='gazebo9'
-INSTALL_VRX='true'
-INSTALL_DAVE=''
+ROS_VERSION='noetic'
+GAZEBO_VERSION='gazebo11'
+INSTALL_VRX=''
+INSTALL_DAVE='true'
 INSTALL_DAVE_MBS=''
 
 if [[ -n $INSTALL_DAVE ]]
@@ -27,6 +27,9 @@ then
 	git clone https://github.com/uuvsimulator/rexrov2.git
 	git clone https://bitbucket.org/whoidsl/ds_sim.git
 	git clone https://bitbucket.org/whoidsl/ds_msgs.git
+
+	sudo apt-get update
+	sudo apt-get upgrade
 
 	cd ..
 	catkin_make

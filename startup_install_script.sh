@@ -10,7 +10,9 @@ SUBLIME_HOME='sublime_text_2'
 
 cd /home/$USER 
 
-sudo apt-get install vim git cmake cmake-qt-gui gcc g++ build-essential tmux vlc ffmpeg python3-pip openssh-server openssh-client texlive-full texmaker arduino -y
+sudo apt-get install vim git cmake cmake-qt-gui gcc g++ build-essential tmux vlc ffmpeg python3-pip openssh-server openssh-client -y
+
+# sudo apt-get install texlive-full texmaker -y
 
 # Currently required to avoid opencv hangup
 python3 -m pip install --upgrade pip
